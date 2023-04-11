@@ -1,23 +1,28 @@
 <h1>
     Conversão de Moeda
 </h1>
-
-<div class="dolar">
-    <label>
-        Quanto está o Dolar?
-    </label>
-    <input type="number" name="Dolar_Real">
+<div class="d-flex justify-content-center">
+    <label>Preço do dolar: </label>
+    <input type="number" id="dolar" [(ngModel)]="Dolar_Real">
+  </div>
+  <div class="mt-4">
+    <label>Quantos Reais: </label>
+    <input type="number" id="conversao" [(ngModel)]="convert_Real">
+  </div>
+    <div class="result" *ngIf="resp">
+    <p>Seu resultado é {{ resp }}</p>
 </div>
-<div class="real">
-    <label>
-        Qual é o valor de conversão?
-    </label>
-    <input type="number" name="convert_Real">
-</div>
-<div class="result">
-    <button class="conversao" onclick="convert_Dolar()">=</button>
-</div>
-<div class="result">
-    <label> Resultado:</label>   
-    <input type="text" class="resp" id="resp" readonly>
+    
+<button class="resp" onclick="resp()">=</button>
+<br>
+<div class="d-flex justify-content-center">
+    <label>Preço do Real: </label>
+    <input type="number" id="dolar" [(ngModel)]="Real_Dolar">
+  </div>
+  <div class="mt-4">
+    <label>Quantos Dolares: </label>
+    <input type="number" id="conversao" [(ngModel)]="convert_Dollar">
+  </div>
+    <div class="result" *ngIf="resp">
+    <p>Seu resultado é {{ resp }}</p>
 </div>

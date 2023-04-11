@@ -12,13 +12,18 @@ export class MoedaComponent {
   resp: number;
 
   Real_Dollar: number;
-  Dollar_Real: number;
-  Dolar_Real: number;
   convert_Real: number;
+
+  Real_Dolar: number;
+  convert_Dollar: number;
+
+  Dolar_Real: number;
 
   resultadoToReal_Dolar: any;
 
   Convert(){
-    this.resp = this.Dolar_Real * this.convert_Real;
+    this.resp = this.Real_Dollar * this.convert_Real;
+    this.resp = parseFloat(this.resp.toFixed(2));
   }
+  
 }
