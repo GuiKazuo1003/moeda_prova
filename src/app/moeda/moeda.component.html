@@ -5,17 +5,17 @@
     <div class="row col-12">
         <div class="p-1 border bg-dark d-flex justify-content-center">
         <label>Valor do Dolar:</label>
-          <input type="number" [(ngModel)]="num">
+          <input type="number" [(ngModel)]="Dolar_Real">
         </div>
     </div>
     <div class="row col-12">
         <div class="p-1 border bg-dark d-flex justify-content-center">
           <label>Quantos reais:</label>
-          <input type="number" [(ngModel)]="num2">
+          <input type="number" [(ngModel)]="convert_Real">
         </div>
     </div>
-    <div *ngIf="'Dolar_Real || Real_Dolar'">
-        <p class="alert alert-success">Resultado: {{num * num2}}</p>
+    <div *ngIf="'Dolar_Real || convert_Real'">
+        <p class="alert alert-success">Resultado: {{(convert_Real / Dolar_Real).toFixed(3)}} Reais</p>
     </div>
     <br>
     <br>
@@ -28,10 +28,28 @@
     </div>
     <div class="row col-12">
         <div class="p-1 border bg-dark d-flex justify-content-center">
-          <label>Quantos Dolares:</label>
+          <label>Quantos Dólares:</label>
           <input type="number" [(ngModel)]="convert_Dollar">
         </div>
     </div>
     <div *ngIf="'Dolar_Real || Real_Dolar'">
-        <p class="alert alert-success">Resultado: {{(Real_Dolar * convert_Dollar).toFixed(2)}}</p>
+        <p class="alert alert-success">Resultado: {{(convert_Dollar / Real_Dolar).toFixed(3)}} Dolares</p>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="row col-12">
+        <div class="p-1 border bg-dark d-flex justify-content-center">
+        <label>Valor do Real:</label>
+          <input type="number" [(ngModel)]="Real_Euro">
+        </div>
+    </div>
+    <div class="row col-12">
+        <div class="p-1 border bg-dark d-flex justify-content-center">
+          <label>Quantos Dólares:</label>
+          <input type="number" [(ngModel)]="convert_Euro">
+        </div>
+    </div>
+    <div *ngIf="'Dolar_Real || Real_Dolar'">
+        <p class="alert alert-success">Resultado: {{(convert_Euro / Real_Euro).toFixed(3)}} Euros</p>
     </div>
