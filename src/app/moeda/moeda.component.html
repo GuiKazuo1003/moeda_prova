@@ -1,7 +1,7 @@
 <h1>
     Conversão de Moeda
 </h1>
-
+<div class="bg-dark">
     <div class="row col-12">
         <div class="p-1 border bg-dark d-flex justify-content-center">
         <label>Valor do Dolar:</label>
@@ -22,34 +22,36 @@
     <br>
     <div class="row col-12">
         <div class="p-1 border bg-dark d-flex justify-content-center">
-        <label>Valor do Real:</label>
+        <label>Valor da Libra:</label>
           <input type="number" [(ngModel)]="Real_Dolar">
         </div>
     </div>
     <div class="row col-12">
         <div class="p-1 border bg-dark d-flex justify-content-center">
-          <label>Quantos Dólares:</label>
+          <label>Quantos Reais:</label>
           <input type="number" [(ngModel)]="convert_Dollar">
         </div>
     </div>
     <div *ngIf="'Dolar_Real || Real_Dolar'">
-        <p class="alert alert-success">Resultado: {{(convert_Dollar / Real_Dolar).toFixed(3)}} Dolares</p>
+        <p class="">Resultado: {{(convert_Dollar * Real_Dolar).toFixed(3)}} Dolares</p>
     </div>
     <br>
     <br>
     <br>
     <div class="row col-12">
         <div class="p-1 border bg-dark d-flex justify-content-center">
-        <label>Valor do Real:</label>
-          <input type="number" [(ngModel)]="Real_Euro">
+        <label>Valor do Euro:</label>
+          <input type="number" class="border-radius" [(ngModel)]="Euro_Real">
         </div>
     </div>
     <div class="row col-12">
         <div class="p-1 border bg-dark d-flex justify-content-center">
-          <label>Quantos Dólares:</label>
+          <label>Quantos Reais:</label>
           <input type="number" [(ngModel)]="convert_Euro">
         </div>
     </div>
     <div *ngIf="'Dolar_Real || Real_Dolar'">
-        <p class="alert alert-success">Resultado: {{(convert_Euro / Real_Euro).toFixed(3)}} Euros</p>
+        <p class="alert alert-success">Resultado: {{(convert_Euro / Euro_Real).toFixed(3)}} Euros</p>
     </div>
+</div>
+    

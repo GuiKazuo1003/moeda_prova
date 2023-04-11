@@ -21,7 +21,7 @@ export class MoedaComponent {
   Real_Dolar: number;
   convert_Dollar: number;
 
-  Real_Euro: number;
+  Euro_Real: number;
   convert_Euro: number;
 
 
