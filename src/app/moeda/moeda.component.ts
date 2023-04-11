@@ -8,8 +8,10 @@ import { Component } from '@angular/core';
 export class MoedaComponent {
 
   num: number;
+  num2: number;
 
   resp: number;
+  resp2: number;
 
   Real_Dollar: number;
   convert_Real: number;
@@ -25,5 +27,8 @@ export class MoedaComponent {
     this.resp = this.Real_Dollar * this.convert_Real;
     this.resp = parseFloat(this.resp.toFixed(2));
   }
-  
+  Convert2(){
+    this.resp2 = this.Dolar_Real * this.convert_Dollar;
+    this.resp2 = parseFloat(this.resp.toFixed(2));
+  }
 }

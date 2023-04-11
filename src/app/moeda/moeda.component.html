@@ -1,28 +1,37 @@
 <h1>
     Conversão de Moeda
 </h1>
-<div class="d-flex justify-content-center">
-    <label>Preço do dolar: </label>
-    <input type="number" id="dolar" [(ngModel)]="Dolar_Real">
-  </div>
-  <div class="mt-4">
-    <label>Quantos Reais: </label>
-    <input type="number" id="conversao" [(ngModel)]="convert_Real">
-  </div>
-    <div class="result" *ngIf="resp">
-    <p>Seu resultado é {{ resp }}</p>
-</div>
-    
-<button class="resp" onclick="resp()">=</button>
-<br>
-<div class="d-flex justify-content-center">
-    <label>Preço do Real: </label>
-    <input type="number" id="dolar" [(ngModel)]="Real_Dolar">
-  </div>
-  <div class="mt-4">
-    <label>Quantos Dolares: </label>
-    <input type="number" id="conversao" [(ngModel)]="convert_Dollar">
-  </div>
-    <div class="result" *ngIf="resp">
-    <p>Seu resultado é {{ resp }}</p>
-</div>
+
+    <div class="row col-12">
+        <div class="p-1 border bg-dark d-flex justify-content-center">
+        <label>Valor do Dolar:</label>
+          <input type="number" [(ngModel)]="num">
+        </div>
+    </div>
+    <div class="row col-12">
+        <div class="p-1 border bg-dark d-flex justify-content-center">
+          <label>Quantos reais:</label>
+          <input type="number" [(ngModel)]="num2">
+        </div>
+    </div>
+    <div *ngIf="'Dolar_Real || Real_Dolar'">
+        <p class="alert alert-success">Resultado: {{num * num2}}</p>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="row col-12">
+        <div class="p-1 border bg-dark d-flex justify-content-center">
+        <label>Valor do Real:</label>
+          <input type="number" [(ngModel)]="Real_Dolar">
+        </div>
+    </div>
+    <div class="row col-12">
+        <div class="p-1 border bg-dark d-flex justify-content-center">
+          <label>Quantos Dolares:</label>
+          <input type="number" [(ngModel)]="convert_Dollar">
+        </div>
+    </div>
+    <div *ngIf="'Dolar_Real || Real_Dolar'">
+        <p class="alert alert-success">Resultado: {{(Real_Dolar * convert_Dollar).toFixed(2)}}</p>
+    </div>
