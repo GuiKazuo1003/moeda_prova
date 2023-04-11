@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class MoedaComponent {
 
+  num: number;
+  Real_Dollar: number;
+  Dollar_Real: number;
+
+  Dolar_Real(){
+    this.num = this.Dollar_Real * 5.07;
+  }
 }
